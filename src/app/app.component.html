@@ -1,8 +1,7 @@
 <ion-app>
     <ion-content [fullscreen]="true">
-        <div class="d-flex flex-column">
-            <!--  <h1>1</h1>
-              <h1>2</h1>-->
+        <div class="d-flex flex-column" style="height: 100%">
+
 
             <ion-header [translucent]="true" *ngIf="displayMobileTopBar">
                 <ion-toolbar>
@@ -14,9 +13,8 @@
                     <ion-title>Standard</ion-title>
                 </ion-toolbar>
             </ion-header>
-
-
-            <ion-router-outlet class="flex-grow-1"></ion-router-outlet>
+            
+            <ion-router-outlet class="flex-grow-1" style="position: static"></ion-router-outlet>
         </div>
     </ion-content>
 
