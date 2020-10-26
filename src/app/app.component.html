@@ -1,23 +1,37 @@
 <ion-app>
 
     <ion-content [fullscreen]="true">
-        <div class="d-flex flex-column" style="height: 100%">
-            <p *ngIf="displayMobileTopBar">
-                <mat-toolbar color="primary">
+        <mat-drawer-container class="example-container" style="height: 100%" autosize>
+            <mat-drawer #drawer position="end" class="px-3">
+                <!--                TODO menu-->
 
-                    <span>My App</span>
-                    <span style="margin-left: auto;"></span>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>menu</mat-icon>
-                    </button>
-                    <span class="example-spacer"></span>
+                I'm a drawer
 
-                </mat-toolbar>
-            </p>
+            </mat-drawer>
+            <mat-drawer-content>
+                <div class="d-flex flex-column" style="height: 100%">
+                    <p *ngIf="displayMobileTopBar">
+                        <mat-toolbar color="primary">
+
+                            <span>My App</span>
+                            <span style="margin-left: auto;"></span>
+                            <button mat-icon-button class="example-icon"
+                                    aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+                                <mat-icon>menu</mat-icon>
+                            </button>
+                            <span class="example-spacer"></span>
+
+                        </mat-toolbar>
+                    </p>
 
 
-            <ion-router-outlet class="flex-grow-1" style="position: static"></ion-router-outlet>
-        </div>
+                    <ion-router-outlet class="flex-grow-1" style="position: static"></ion-router-outlet>
+                </div>
+
+
+            </mat-drawer-content>
+        </mat-drawer-container>
+
     </ion-content>
 
 
