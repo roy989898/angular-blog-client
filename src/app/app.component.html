@@ -5,11 +5,16 @@
             <mat-drawer #drawer position="end" class="px-3">
                 <!--                TODO menu-->
                 <div class="d-flex flex-column">
-                    <app-icon-name [iconName]="tab1Icon" [text]="tab1Text" [active]="tab1Active$|async"></app-icon-name>
-                    <app-icon-name [iconName]="tab2Icon" [text]="tab2Text" [active]="tab2Active$|async"></app-icon-name>
-                    <app-icon-name [iconName]="tab3Icon" [text]="tab3Text" [active]="tab3Active$|async"></app-icon-name>
-                    <app-icon-name [iconName]="tab4Icon" [text]="tab4Text" [active]="tab4Active$|async"></app-icon-name>
-                    <app-icon-name [iconName]="tab5Icon" [text]="tab5Text" [active]="tab5Active$|async"></app-icon-name>
+                    <app-icon-name [iconName]="tab1Icon" [text]="tab1Text" [active]="tab1Active$|async"
+                                   (click)="tab1Click()"></app-icon-name>
+                    <app-icon-name [iconName]="tab2Icon" [text]="tab2Text" [active]="tab2Active$|async"
+                                   (click)="tab2Click()"></app-icon-name>
+                    <app-icon-name [iconName]="tab3Icon" [text]="tab3Text" [active]="tab3Active$|async"
+                                   (click)="tab3Click()"></app-icon-name>
+                    <app-icon-name [iconName]="tab4Icon" [text]="tab4Text" [active]="tab4Active$|async"
+                                   (click)="tab4Click()"></app-icon-name>
+                    <app-icon-name [iconName]="tab5Icon" [text]="tab5Text" [active]="tab5Active$|async"
+                                   (click)="tab5Click()"></app-icon-name>
                 </div>
 
 

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
@@ -7,6 +7,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Subscription} from 'rxjs';
 import {TopBarQuery} from './akita/TopBarStateStore/TopBarQuery';
 import {TabNameIconService} from './tab-name-icon.service';
+import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
     selector: 'app-root',
@@ -14,7 +15,7 @@ import {TabNameIconService} from './tab-name-icon.service';
     styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-
+    @ViewChild('drawer') drawer: MatDrawer;
     displayMobileTopBar = false;
     breakpointObserverD?: Subscription;
     tab1Icon = this.tabNameIconService.tab1Icon;
@@ -48,7 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
         private  breakpointObserver: BreakpointObserver,
-        private topBarQuery: TopBarQuery, private tabNameIconService: TabNameIconService
+        private topBarQuery: TopBarQuery, public tabNameIconService: TabNameIconService
     ) {
         this.initializeApp();
     }
@@ -73,5 +74,31 @@ export class AppComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         this.breakpointObserverD?.unsubscribe();
+    }
+
+
+    tab1Click() {
+        this.tabNameIconService.tab1Click();
+        this.drawer.close();
+    }
+
+    tab2Click() {
+        this.tabNameIconService.tab2Click();
+        this.drawer.close();
+    }
+
+    tab3Click() {
+        this.tabNameIconService.tab3Click();
+        this.drawer.close();
+    }
+
+    tab4Click() {
+        this.tabNameIconService.tab4Click();
+        this.drawer.close();
+    }
+
+    tab5Click() {
+        this.tabNameIconService.tab5Click();
+        this.drawer.close();
     }
 }

@@ -19,4 +19,24 @@ export class TabNameIconService {
 
     constructor() {
     }
+
+    tab1Click() {
+        console.log('tab 1 click');
+    }
+
+    tab2Click() {
+        console.log('tab 2 click');
+    }
+
+    tab3Click() {
+        console.log('tab 3 click');
+    }
+
+    tab4Click() {
+        console.log('tab 4 click');
+    }
+
+    tab5Click() {
+        console.log('tab 5 click');
+    }
 }
