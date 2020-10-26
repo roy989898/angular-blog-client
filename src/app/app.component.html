@@ -1,19 +1,21 @@
 <ion-app>
+
     <ion-content [fullscreen]="true">
         <div class="d-flex flex-column" style="height: 100%">
+            <p *ngIf="displayMobileTopBar">
+                <mat-toolbar color="primary">
+
+                    <span>My App</span>
+                    <span style="margin-left: auto;"></span>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+
+                </mat-toolbar>
+            </p>
 
 
-            <ion-header [translucent]="true" *ngIf="displayMobileTopBar">
-                <ion-toolbar>
-                    <ion-buttons slot="start">
-                        <ion-menu-button auto-hide="false"></ion-menu-button>
-                    </ion-buttons>
-
-
-                    <ion-title>Standard</ion-title>
-                </ion-toolbar>
-            </ion-header>
-            
             <ion-router-outlet class="flex-grow-1" style="position: static"></ion-router-outlet>
         </div>
     </ion-content>
