@@ -17,9 +17,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {IconNameComponent} from './component/ionn-name/icon-name.component';
+import {AdminTopBarComponent} from './component/admin-top-bar/admin-top-bar.component';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, IconNameComponent, AdminTopBarComponent],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, environment.production ? [] : AkitaNgDevtools.forRoot(),
         MatToolbarModule

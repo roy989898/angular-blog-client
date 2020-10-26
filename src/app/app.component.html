@@ -10,10 +10,12 @@
             </mat-drawer>
             <mat-drawer-content>
                 <div class="d-flex flex-column" style="height: 100%">
+                    <app-admin-top-bar *ngIf="!displayMobileTopBar" ></app-admin-top-bar>
+
                     <p *ngIf="displayMobileTopBar">
                         <mat-toolbar color="primary">
 
-                            <span>My App</span>
+                            <span>Blog</span>
                             <span style="margin-left: auto;"></span>
                             <button mat-icon-button class="example-icon"
                                     aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
