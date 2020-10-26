@@ -4,13 +4,19 @@
         <mat-drawer-container class="example-container" style="height: 100%" autosize>
             <mat-drawer #drawer position="end" class="px-3">
                 <!--                TODO menu-->
+                <div class="d-flex flex-column">
+                    <app-icon-name [iconName]="tab1Icon" [text]="tab1Text" [active]="tab1Active$|async"></app-icon-name>
+                    <app-icon-name [iconName]="tab2Icon" [text]="tab2Text" [active]="tab2Active$|async"></app-icon-name>
+                    <app-icon-name [iconName]="tab3Icon" [text]="tab3Text" [active]="tab3Active$|async"></app-icon-name>
+                    <app-icon-name [iconName]="tab4Icon" [text]="tab4Text" [active]="tab4Active$|async"></app-icon-name>
+                    <app-icon-name [iconName]="tab5Icon" [text]="tab5Text" [active]="tab5Active$|async"></app-icon-name>
+                </div>
 
-                I'm a drawer
 
             </mat-drawer>
             <mat-drawer-content>
                 <div class="d-flex flex-column" style="height: 100%">
-                    <app-admin-top-bar *ngIf="!displayMobileTopBar" ></app-admin-top-bar>
+                    <app-admin-top-bar *ngIf="!displayMobileTopBar"></app-admin-top-bar>
 
                     <p *ngIf="displayMobileTopBar">
                         <mat-toolbar color="primary">

@@ -5,6 +5,8 @@ import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Subscription} from 'rxjs';
+import {TopBarQuery} from './akita/TopBarStateStore/TopBarQuery';
+import {TabNameIconService} from './tab-name-icon.service';
 
 @Component({
     selector: 'app-root',
@@ -15,12 +17,38 @@ export class AppComponent implements OnInit, OnDestroy {
 
     displayMobileTopBar = false;
     breakpointObserverD?: Subscription;
+    tab1Icon = this.tabNameIconService.tab1Icon;
+    tab1Text = this.tabNameIconService.tab1Text;
+
+
+    tab2Icon = this.tabNameIconService.tab2Icon;
+    tab2Text = this.tabNameIconService.tab2Text;
+
+
+    tab3Icon = this.tabNameIconService.tab3Icon;
+    tab3Text = this.tabNameIconService.tab3Text;
+
+
+    tab4Icon = this.tabNameIconService.tab4Icon;
+    tab4Text = this.tabNameIconService.tab4Text;
+
+
+    tab5Icon = this.tabNameIconService.tab5Icon;
+    tab5Text = this.tabNameIconService.tab5Text;
+
+
+    tab1Active$ = this.topBarQuery.indexBtOn$;
+    tab2Active$ = this.topBarQuery.categoryBtOn$;
+    tab3Active$ = this.topBarQuery.tagBtOn$;
+    tab4Active$ = this.topBarQuery.timeLineBtOn$;
+    tab5Active$ = this.topBarQuery.aboutMeBtOn$;
 
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
         private  breakpointObserver: BreakpointObserver,
+        private topBarQuery: TopBarQuery, private tabNameIconService: TabNameIconService
     ) {
         this.initializeApp();
     }

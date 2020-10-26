@@ -13,19 +13,19 @@ export class AdminTopBarComponent implements OnInit {
     tab1Text = this.tabNameIconService.tab1Text;
 
 
-    tab2Icon = this.tabNameIconService.tab1Icon;
+    tab2Icon = this.tabNameIconService.tab2Icon;
     tab2Text = this.tabNameIconService.tab2Text;
 
 
-    tab3Icon = this.tabNameIconService.tab1Icon;
+    tab3Icon = this.tabNameIconService.tab3Icon;
     tab3Text = this.tabNameIconService.tab3Text;
 
 
-    tab4Icon = this.tabNameIconService.tab1Icon;
+    tab4Icon = this.tabNameIconService.tab4Icon;
     tab4Text = this.tabNameIconService.tab4Text;
 
 
-    tab5Icon = this.tabNameIconService.tab1Icon;
+    tab5Icon = this.tabNameIconService.tab5Icon;
     tab5Text = this.tabNameIconService.tab5Text;
 
 
