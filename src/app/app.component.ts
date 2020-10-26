@@ -20,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private  breakpointObserver: BreakpointObserver
+        private  breakpointObserver: BreakpointObserver,
     ) {
         this.initializeApp();
     }
