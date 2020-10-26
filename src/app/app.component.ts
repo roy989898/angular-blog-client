@@ -11,7 +11,7 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
 
-    displayMobileTopBar = true;
+    displayMobileTopBar = false;
 
     constructor(
         private platform: Platform,
@@ -25,6 +25,7 @@ export class AppComponent {
         this.platform.ready().then(() => {
             this.statusBar.styleDefault();
             this.splashScreen.hide();
+            this.displayMobileTopBar = true;
         });
     }
 }
