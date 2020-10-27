@@ -14,10 +14,10 @@ import {MatDrawer} from '@angular/material/sidenav';
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
     @ViewChild('drawer') drawer: MatDrawer;
     displayMobileTopBar = false;
-    breakpointObserverD?: Subscription;
+
     tab1Icon = this.tabNameIconService.tab1Icon;
     tab1Text = this.tabNameIconService.tab1Text;
 
@@ -48,7 +48,6 @@ export class AppComponent implements OnInit, OnDestroy {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private  breakpointObserver: BreakpointObserver,
         private topBarQuery: TopBarQuery, public tabNameIconService: TabNameIconService
     ) {
         this.initializeApp();
@@ -60,20 +59,11 @@ export class AppComponent implements OnInit, OnDestroy {
             this.splashScreen.hide();
 
 
-            this.breakpointObserverD = this.breakpointObserver.observe([
-                '(min-width: 576px)'
-            ]).subscribe(result => {
-                this.displayMobileTopBar = !result.matches;
-            });
         });
     }
 
     ngOnInit(): void {
 
-    }
-
-    ngOnDestroy(): void {
-        this.breakpointObserverD?.unsubscribe();
     }
 
 
