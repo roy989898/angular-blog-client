@@ -9,6 +9,7 @@ import {TopBarModule} from '../../component/top-bar/top-bar.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {TypeModule} from '../../component/type/type.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatBadgeModule} from '@angular/material/badge';
         TopBarModule,
         MatCardModule,
         MatIconModule,
-        MatBadgeModule
+        MatBadgeModule,
+        TypeModule
     ],
     declarations: [HomePage]
 })
