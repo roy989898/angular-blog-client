@@ -23,10 +23,22 @@ $a: mat-color($accent);
 
 .title {
   color: $p;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .number {
   color: $a;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+
+.blog_title{
+  color: $p;
+  font-size: 1.3rem;
+}
+
+
+.blog_author{
+  color: $a;
+  font-size: 1.3rem;
 }

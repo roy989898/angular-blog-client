@@ -7,6 +7,8 @@ import {HomePage} from './home.page';
 import {HomePageRoutingModule} from './home-routing.module';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import {MatCardModule} from '@angular/material/card';
         IonicModule,
         HomePageRoutingModule,
         TopBarModule,
-        MatCardModule
+        MatCardModule,
+        MatIconModule,
+        MatBadgeModule
     ],
     declarations: [HomePage]
 })
