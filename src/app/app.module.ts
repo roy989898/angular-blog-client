@@ -17,14 +17,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {IconNameComponent} from './component/ionn-name/icon-name.component';
+import {TopBarModule} from './component/top-bar/top-bar.module';
 
 @NgModule({
-    declarations: [AppComponent, IconNameComponent],
+    declarations: [AppComponent],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, environment.production ? [] : AkitaNgDevtools.forRoot(),
         MatToolbarModule
-        , AkitaNgRouterStoreModule.forRoot(), BrowserAnimationsModule, MatButtonModule, MatIconModule, MatSidenavModule],
+        , AkitaNgRouterStoreModule.forRoot(), BrowserAnimationsModule, MatButtonModule, MatIconModule, MatSidenavModule, TopBarModule],
     providers: [
         StatusBar,
         SplashScreen,
