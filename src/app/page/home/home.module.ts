@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {TypeModule} from '../../component/type/type.module';
+import {MatRippleModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {TypeModule} from '../../component/type/type.module';
         MatCardModule,
         MatIconModule,
         MatBadgeModule,
-        TypeModule
+        TypeModule,
+        MatRippleModule
     ],
     declarations: [HomePage]
 })
