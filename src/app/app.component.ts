@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
@@ -8,16 +8,17 @@ import {Subscription} from 'rxjs';
 import {TopBarQuery} from './akita/TopBarStateStore/TopBarQuery';
 import {TabNameIconService} from './tab-name-icon.service';
 import {MatDrawer} from '@angular/material/sidenav';
+import {SlideMenuQuery} from './akita/SlideMenuStore/SlideMenuQuery';
 
 @Component({
     selector: 'app-root',
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     @ViewChild('drawer') drawer: MatDrawer;
     displayMobileTopBar = false;
-
+    slideMenuQueryD?: Subscription;
     tab1Icon = this.tabNameIconService.tab1Icon;
     tab1Text = this.tabNameIconService.tab1Text;
 
@@ -48,7 +49,8 @@ export class AppComponent implements OnInit {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private topBarQuery: TopBarQuery, public tabNameIconService: TabNameIconService
+        private topBarQuery: TopBarQuery, public tabNameIconService: TabNameIconService,
+        private slideMenuQuery: SlideMenuQuery
     ) {
         this.initializeApp();
     }
@@ -63,6 +65,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
+
 
     }
 
@@ -90,5 +93,23 @@ export class AppComponent implements OnInit {
     tab5Click() {
         this.tabNameIconService.tab5Click();
         this.drawer.close();
+    }
+
+    ngOnDestroy(): void {
+
+        this.slideMenuQueryD.unsubscribe();
+    }
+
+    ngAfterViewInit(): void {
+        this.slideMenuQueryD = this.slideMenuQuery.isOpen$.subscribe((isOpen) => {
+            console.log('slideMenuQueryD');
+            if (isOpen) {
+
+                this.drawer.open();
+            } else {
+                this.drawer.close();
+            }
+
+        });
     }
 }
