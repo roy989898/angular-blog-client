@@ -1,0 +1,15 @@
+<app-admin-top-bar *ngIf="!displayMobileTopBar"></app-admin-top-bar>
+
+<p *ngIf="displayMobileTopBar">
+  <mat-toolbar color="primary">
+
+    <span>Blog</span>
+    <span style="margin-left: auto;"></span>
+    <button mat-icon-button class="example-icon"
+            aria-label="Example icon-button with menu icon" (click)="menuButtonClick()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>
+</p>

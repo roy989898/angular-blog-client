@@ -18,10 +18,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {IconNameComponent} from './component/ionn-name/icon-name.component';
-import {AdminTopBarComponent} from './component/admin-top-bar/admin-top-bar.component';
 
 @NgModule({
-    declarations: [AppComponent, IconNameComponent, AdminTopBarComponent],
+    declarations: [AppComponent, IconNameComponent],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, environment.production ? [] : AkitaNgDevtools.forRoot(),
         MatToolbarModule
@@ -31,6 +30,9 @@ import {AdminTopBarComponent} from './component/admin-top-bar/admin-top-bar.comp
         SplashScreen,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
         {provide: NG_ENTITY_SERVICE_CONFIG, useValue: {baseUrl: 'https://jsonplaceholder.typicode.com'}}
+    ],
+    exports: [
+
     ],
     bootstrap: [AppComponent]
 })
