@@ -1,16 +1,36 @@
-<div class="d-flex flex-column">
-    <app-top-bar></app-top-bar>
-    <div class="container mt-1">
-        <mat-card style="width: 100%;">
-            <mat-card-content>
-                1
-                <!-- <div class="d-flex flex-row justify-content-between">
-                 <div>Blog</div> <div><span >Total</span><span>1</span><span>post</span></div>
-                 </div>-->
-            </mat-card-content>
-        </mat-card>
+<ion-content [fullscreen]="true">
+    <div class="d-flex flex-column">
+        <app-top-bar></app-top-bar>
+
+
+        <div class="ion-padding">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <div>
+                            <mat-card class="mx-2">
+
+                                <mat-card-content>
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div>Blog</div>
+                                        <div><span>Total</span><span>1</span><span>post</span></div>
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-content>
+                                    1
+                                    <!-- <div class="d-flex flex-row justify-content-between">
+                                     <div>Blog</div> <div><span >Total</span><span>1</span><span>post</span></div>
+                                     </div>-->
+                                </mat-card-content>
+                            </mat-card>
+
+                        </div>
+                    </ion-col>
+
+                </ion-row>
+            </ion-grid>
+        </div>
+
+
     </div>
-
-
-</div>
-
+</ion-content>
