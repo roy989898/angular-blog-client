@@ -6,6 +6,7 @@ import {HomePage} from './home.page';
 
 import {HomePageRoutingModule} from './home-routing.module';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {TopBarModule} from '../../component/top-bar/top-bar.module';
         FormsModule,
         IonicModule,
         HomePageRoutingModule,
-        TopBarModule
+        TopBarModule,
+        MatCardModule
     ],
     declarations: [HomePage]
 })
