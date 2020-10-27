@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {HomePage} from './home.page';
 
 import {HomePageRoutingModule} from './home-routing.module';
-import {TopBarModule} from '../component/top-bar/top-bar.module';
+import {TopBarModule} from '../../component/top-bar/top-bar.module';
 
 
 @NgModule({
