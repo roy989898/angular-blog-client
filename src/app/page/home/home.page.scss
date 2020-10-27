@@ -1,8 +1,9 @@
-
-
-
 @import "src/app/myVairable";
 @import '~@angular/material/theming';
+
+$p: mat-color($primary);
+$a: mat-color($accent);
+
 
 .candy-carousel {
   // Get the default hue for a palette.
@@ -17,4 +18,15 @@
 
   // Get a contrast color for a hue by adding `-contrast` to any other key.
   border-color: mat-color($primary, '100-contrast');
+}
+
+
+.title {
+  color: $p;
+  font-size: 1.2rem;
+}
+
+.number {
+  color: $a;
+  font-size: 1.2rem;
 }
