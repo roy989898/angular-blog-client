@@ -27,7 +27,7 @@ export class TopBarComponent implements OnInit, OnDestroy {
 
     menuButtonClick() {
         console.log('menuButtonClick');
-        this.slideMenuService.toggle();
+        this.slideMenuService.click();
 
     }
 

@@ -8,7 +8,7 @@ import {SlideMenuState, SlideMenuStore} from './SlideMenuStore';
 })
 export class SlideMenuQuery extends Query<SlideMenuState> {
 
-    isOpen$ = this.select('isOpen');
+    count$ = this.select('count');
 
     constructor(protected store: SlideMenuStore) {
         super(store);

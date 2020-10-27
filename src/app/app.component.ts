@@ -101,15 +101,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        this.slideMenuQueryD = this.slideMenuQuery.isOpen$.subscribe((isOpen) => {
+        this.slideMenuQueryD = this.slideMenuQuery.count$.subscribe((c) => {
             console.log('slideMenuQueryD');
-            if (isOpen) {
-
-                this.drawer.open();
-            } else {
-                this.drawer.close();
+            if (c !== 0) {
+                this.drawer.toggle();
             }
-
         });
     }
 }

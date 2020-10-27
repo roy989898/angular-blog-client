@@ -9,10 +9,10 @@ export class SlideMenuService {
     constructor(private store: SlideMenuStore) {
     }
 
-    toggle() {
+    click() {
 
 
-        this.store.update({isOpen: !this.store.getValue().isOpen});
+        this.store.update({count: this.store.getValue().count + 1});
 
     }
 }

@@ -2,12 +2,12 @@ import {Injectable} from '@angular/core';
 import {Store, StoreConfig} from '@datorama/akita';
 
 export interface SlideMenuState {
-    isOpen: boolean;
+    count: number;
 }
 
 export function createInitialState(): SlideMenuState {
     return {
-        isOpen: false
+        count: 0
     };
 }
 
