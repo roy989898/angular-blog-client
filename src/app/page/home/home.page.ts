@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnDestroy, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {TopBarComponent} from '../../component/top-bar/top-bar.component';
 import {NgResizeObserver, ngResizeObserverProviders} from 'ng-resize-observer';
 import {Subscription} from 'rxjs';
@@ -35,7 +35,7 @@ interface Tag {
 
 })
 
-export class HomePage extends HasTopBarPage {
+export class HomePage extends HasTopBarPage implements OnInit {
     blogs: Blog[] = [
         {
             title: 't1',
@@ -147,14 +147,24 @@ export class HomePage extends HasTopBarPage {
     constructor(private topBarStoreService: TopBarStoreService) {
 
         super();
-        topBarStoreService.updateTopState(true, false, false, false, false);
 
     }
+
 
     onToBarResized($event: UIEvent) {
         console.log('onToBarResized');
         console.log($event);
 
+    }
+
+    ngOnInit(): void {
+        // this.topBarStoreService.updateTopState(true, false, false, false, false);
+        // console.warn('CategoryPage ngOnInit');
+    }
+
+    ionViewWillEnter() {
+        this.topBarStoreService.updateTopState(true, false, false, false, false);
+        // console.warn('HomePage ionViewWillEnter');
     }
 
 }

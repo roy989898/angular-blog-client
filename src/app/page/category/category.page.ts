@@ -9,14 +9,20 @@ import {HasTopBarPage} from '../HasTopbarPage';
     templateUrl: './category.page.html',
     styleUrls: ['./category.page.scss'],
 })
-export class CategoryPage extends HasTopBarPage {
-
+export class CategoryPage extends HasTopBarPage implements OnInit {
 
 
     constructor(private topBarStoreService: TopBarStoreService) {
         super();
-        topBarStoreService.updateTopState(false, true, false, false, false);
     }
 
+    ngOnInit(): void {
+        // this.topBarStoreService.updateTopState(false, true, false, false, false);
 
+    }
+
+    ionViewWillEnter() {
+        this.topBarStoreService.updateTopState(false, true, false, false, false);
+
+    }
 }

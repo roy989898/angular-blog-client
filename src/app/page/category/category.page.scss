@@ -1,0 +1,17 @@
+@import "src/app/myVairable";
+@import '~@angular/material/theming';
+
+$p: mat-color($primary);
+$a: mat-color($accent);
+
+
+
+.title {
+  color: $p;
+  font-size: 1.5rem;
+}
+
+.number {
+  color: $a;
+  font-size: 1.4rem;
+}
