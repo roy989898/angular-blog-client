@@ -1,0 +1,23 @@
+@import "src/app/myVairable";
+@import '~@angular/material/theming';
+
+$p: mat-color($primary);
+$a: mat-color($accent);
+
+
+
+
+
+
+
+
+.blog_title{
+  color: $p;
+  font-size: 1.3rem;
+}
+
+
+.blog_author{
+  color: $a;
+  font-size: 1.3rem;
+}

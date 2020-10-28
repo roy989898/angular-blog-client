@@ -13,6 +13,7 @@ import {TypeModule} from '../../component/type/type.module';
 import {MatRippleModule} from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
+import {BlogListItemModule} from '../../component/blog-list-item/blog-list-item.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MatChipsModule} from '@angular/material/chips';
         TypeModule,
         MatRippleModule,
         MatButtonModule,
-        MatChipsModule
+        MatChipsModule,
+        BlogListItemModule
     ],
     declarations: [HomePage]
 })

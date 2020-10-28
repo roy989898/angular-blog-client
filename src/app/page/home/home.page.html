@@ -13,43 +13,53 @@
                                 <div class="title">Blog</div>
                                 <div><span>Total</span><span class="number">1</span><span>post</span></div>
                             </mat-card>
-                            <mat-card class=" mt-2 p-0" *ngFor="let blog of blogs">
+                            <!--   <mat-card class=" mt-2 p-0" *ngFor="let blog of blogs">
 
-                                <div matRipple class="p-2">
-                                    <mat-card-content>
-                                        <div class="blog_title">{{blog.title}}</div>
-                                        <div class="blog_brife my-3">{{blog.brief}}</div>
-                                        <ion-grid>
-                                            <ion-row>
-                                                <ion-col size="8" class="p-0">
-                                                    <div class="d-flex flex-row align-items-center">
-                                                        <div class="blog_author">{{blog.author}}</div>
-                                                        <div class="blog_date mx-1">{{blog.date| date:'shortDate' }}</div>
-                                                        <mat-icon class="mr-5" [matBadge]="blog.view"
-                                                                  matBadgeColor="warn">
-                                                            visibility
-                                                        </mat-icon>
-                                                    </div>
-                                                </ion-col>
-                                                <ion-col size="4" style="padding: 0">
-                                                    <app-type [text]="blog.title"></app-type>
-                                                </ion-col>
-
-
-                                            </ion-row>
-                                        </ion-grid>
-
-                                        <!--    <div class="row baby">
-                                                <div class="col-8" style="background: blue ;height: 30px;padding: 0" ></div>
-                                                <div class="col-4" style="background: red;height: 30px;padding: 0"></div>
-                                            </div>-->
+                                   <div matRipple class="p-2">
+                                       <mat-card-content>
+                                           <div class="blog_title">{{blog.title}}</div>
+                                           <div class="blog_brife my-3">{{blog.brief}}</div>
+                                           <ion-grid>
+                                               <ion-row>
+                                                   <ion-col size="8" class="p-0">
+                                                       <div class="d-flex flex-row align-items-center">
+                                                           <div class="blog_author">{{blog.author}}</div>
+                                                           <div class="blog_date mx-1">{{blog.date| date:'shortDate' }}</div>
+                                                           <mat-icon class="mr-5" [matBadge]="blog.view"
+                                                                     matBadgeColor="warn">
+                                                               visibility
+                                                           </mat-icon>
+                                                       </div>
+                                                   </ion-col>
+                                                   <ion-col size="4" style="padding: 0">
+                                                       <app-type [text]="blog.title"></app-type>
+                                                   </ion-col>
 
 
-                                    </mat-card-content>
-                                </div>
+                                               </ion-row>
+                                           </ion-grid>
+
+                                           &lt;!&ndash;    <div class="row baby">
+                                                   <div class="col-8" style="background: blue ;height: 30px;padding: 0" ></div>
+                                                   <div class="col-4" style="background: red;height: 30px;padding: 0"></div>
+                                               </div>&ndash;&gt;
 
 
-                            </mat-card>
+                                       </mat-card-content>
+                                   </div>
+
+
+                               </mat-card>-->
+                            <app-blog-list-item *ngFor="let blog of blogs"
+                                                [title]="blog.title"
+                                                [brief]="blog.brief"
+                                                [author]="blog.author"
+                                                [date]="blog.date"
+                                                [view]="blog.view"
+                                                [tag]="blog.title"
+
+
+                            ></app-blog-list-item>
 
                         </div>
                     </ion-col>

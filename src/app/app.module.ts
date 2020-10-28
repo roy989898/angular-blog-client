@@ -25,16 +25,15 @@ import {BreedingRhombusSpinnerModule} from 'angular-epic-spinners';
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, environment.production ? [] : AkitaNgDevtools.forRoot(),
         MatToolbarModule
-        , AkitaNgRouterStoreModule.forRoot(), BrowserAnimationsModule, MatButtonModule, MatIconModule, MatSidenavModule, TopBarModule, BreedingRhombusSpinnerModule],
+        , AkitaNgRouterStoreModule.forRoot(), BrowserAnimationsModule, MatButtonModule, MatIconModule, MatSidenavModule
+        , TopBarModule, BreedingRhombusSpinnerModule],
     providers: [
         StatusBar,
         SplashScreen,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
         {provide: NG_ENTITY_SERVICE_CONFIG, useValue: {baseUrl: 'https://jsonplaceholder.typicode.com'}}
     ],
-    exports: [
-
-    ],
+    exports: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
