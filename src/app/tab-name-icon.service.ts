@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {MyRouterService} from './my-router.service';
 
 @Injectable({
     providedIn: 'root'
@@ -17,10 +18,11 @@ export class TabNameIconService {
     tab5Text = 'About Me';
 
 
-    constructor() {
+    constructor(private myRouterService: MyRouterService) {
     }
 
     tab1Click() {
+        this.myRouterService.toHomePage();
         console.log('tab 1 click');
     }
 

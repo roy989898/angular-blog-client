@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnDestroy, ViewChild} from '@angular/core';
 import {TopBarComponent} from '../../component/top-bar/top-bar.component';
 import {NgResizeObserver, ngResizeObserverProviders} from 'ng-resize-observer';
 import {Subscription} from 'rxjs';
+import {TopBarStoreService} from '../../akita/TopBarStateStore/TopBarStoreService';
 
 
 interface Blog {
@@ -145,8 +146,9 @@ export class HomePage implements AfterViewInit, OnDestroy {
     topBarHeight = 0;
     private topBarD?: Subscription;
 
-    constructor() {
+    constructor(private topBarStoreService: TopBarStoreService) {
 
+        topBarStoreService.updateTopState(true, false, false, false, false);
 
     }
 
