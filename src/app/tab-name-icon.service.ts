@@ -32,6 +32,7 @@ export class TabNameIconService {
     }
 
     tab3Click() {
+        this.myRouterService.toTagPage();
         console.log('tab 3 click');
     }
 

@@ -22,4 +22,11 @@ export class MyRouterService {
 
         this.router.navigate(['/category']);
     }
+
+
+    toTagPage() {
+        // this.topBarStoreService.updateTopState(false, true, false, false, false);
+
+        this.router.navigate(['/tag']);
+    }
 }
