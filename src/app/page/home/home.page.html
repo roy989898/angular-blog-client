@@ -7,7 +7,7 @@
         <div class="ion-padding">
             <ion-grid>
                 <ion-row>
-                    <ion-col size-sm="8" size="12" class="p-0">
+                    <ion-col size-sm="7" size="12" class="p-0">
                         <div>
                             <div class="d-flex flex-row justify-content-between mb-1">
                                 <div class="title">Blog</div>
@@ -55,9 +55,26 @@
                     </ion-col>
 
 
-                    <ion-col size-sm="4" size="12" class="p-0">
-                        DDDDD
-                        <!--                        TODO-->
+                    <ion-col size-sm="5" size="12" class="p-0">
+                        <div class="ml-1">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title>Category</mat-card-title>
+                                </mat-card-header>
+
+                                <mat-card-content>
+                                    <ion-list>
+                                        <ion-item matRipple *ngFor="let category of categories">
+                                            <ion-label>{{category.name}}</ion-label>
+                                            <button mat-flat-button color="warn">{{category.number}}</button>
+
+                                        </ion-item>
+
+                                    </ion-list>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+
                     </ion-col>
                 </ion-row>
             </ion-grid>

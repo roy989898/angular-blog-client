@@ -15,6 +15,12 @@ interface Blog {
 }
 
 
+interface Category {
+    name: string;
+    number: number;
+}
+
+
 @Component({
     selector: 'app-home',
     templateUrl: 'home.page.html',
@@ -103,6 +109,24 @@ export class HomePage implements AfterViewInit, OnDestroy {
 
         },
 
+    ];
+    categories: Category[] = [
+        {
+            name: 'c1',
+            number: 0
+        },
+        {
+            name: 'c2',
+            number: 2
+        },
+        {
+            name: 'c3',
+            number: 2
+        },
+        {
+            name: 'c4',
+            number: 6
+        }
     ];
 
     topBarHeight = 0;

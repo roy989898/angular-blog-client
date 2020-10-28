@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {TypeModule} from '../../component/type/type.module';
 import {MatRippleModule} from '@angular/material/core';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatRippleModule} from '@angular/material/core';
         MatIconModule,
         MatBadgeModule,
         TypeModule,
-        MatRippleModule
+        MatRippleModule,
+        MatButtonModule
     ],
     declarations: [HomePage]
 })
