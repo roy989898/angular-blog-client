@@ -9,6 +9,7 @@ import { CategoryPageRoutingModule } from './category-routing.module';
 import { CategoryPage } from './category.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
 import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import {MatCardModule} from '@angular/material/card';
         IonicModule,
         CategoryPageRoutingModule,
         TopBarModule,
-        MatCardModule
+        MatCardModule,
+        MatChipsModule
     ],
   declarations: [CategoryPage]
 })
