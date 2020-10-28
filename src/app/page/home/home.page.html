@@ -1,13 +1,13 @@
 <ion-content [fullscreen]="true">
     <app-top-bar #topBar style="position: fixed ;z-index: 10;width: 100%"
                  (resize)="onToBarResized($event)"></app-top-bar>
-    <div  [style.margin-top.px]="topBarHeight">
+    <div [style.margin-top.px]="topBarHeight">
 
 
         <div class="ion-padding">
             <ion-grid>
                 <ion-row>
-                    <ion-col>
+                    <ion-col size-sm="8" size="12" class="p-0">
                         <div>
                             <div class="d-flex flex-row justify-content-between mb-1">
                                 <div class="title">Blog</div>
@@ -21,7 +21,7 @@
                                         <div class="blog_brife my-3">{{blog.brief}}</div>
                                         <ion-grid>
                                             <ion-row>
-                                                <ion-col size="8" style="padding: 0">
+                                                <ion-col size="8" class="p-0">
                                                     <div class="d-flex flex-row align-items-center">
                                                         <div class="blog_author">{{blog.author}}</div>
                                                         <div class="blog_date mx-1">{{blog.date| date:'shortDate' }}</div>
@@ -52,6 +52,12 @@
                             </mat-card>
 
                         </div>
+                    </ion-col>
+
+
+                    <ion-col size-sm="4" size="12" class="p-0">
+                        DDDDD
+                        <!--                        TODO-->
                     </ion-col>
                 </ion-row>
             </ion-grid>
