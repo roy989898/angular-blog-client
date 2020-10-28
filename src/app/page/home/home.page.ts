@@ -36,7 +36,6 @@ interface Tag {
 })
 
 export class HomePage extends HasTopBarPage {
-    @ViewChild(TopBarComponent, {static: false}) topBar: TopBarComponent;
     blogs: Blog[] = [
         {
             title: 't1',

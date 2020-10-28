@@ -10,7 +10,6 @@ import {HasTopBarPage} from '../HasTopbarPage';
     styleUrls: ['./category.page.scss'],
 })
 export class CategoryPage extends HasTopBarPage {
-    @ViewChild(TopBarComponent, {static: false}) topBar: TopBarComponent;
 
 
 
