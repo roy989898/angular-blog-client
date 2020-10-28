@@ -9,6 +9,8 @@ import { TagPageRoutingModule } from './tag-routing.module';
 import { TagPage } from './tag.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
 import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+import {BlogListItemModule} from '../../component/blog-list-item/blog-list-item.module';
 
 @NgModule({
     imports: [
@@ -17,7 +19,9 @@ import {MatCardModule} from '@angular/material/card';
         IonicModule,
         TagPageRoutingModule,
         TopBarModule,
-        MatCardModule
+        MatCardModule,
+        MatChipsModule,
+        BlogListItemModule
     ],
   declarations: [TagPage]
 })
