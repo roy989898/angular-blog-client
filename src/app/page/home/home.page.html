@@ -1,6 +1,7 @@
 <ion-content [fullscreen]="true">
-    <div class="d-flex flex-column">
-        <app-top-bar></app-top-bar>
+    <app-top-bar #topBar style="position: fixed ;z-index: 10;width: 100%" (resize)="onToBarResized($event)"></app-top-bar>
+    <div class="d-flex flex-column" >
+
 
 
         <div class="ion-padding">
