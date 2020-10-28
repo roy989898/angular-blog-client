@@ -55,22 +55,61 @@
                     </ion-col>
 
 
-                    <ion-col size-sm="5" size="12" class="p-0">
+                    <ion-col size-sm="5" size="12" class="p-0 mt-sm-0 mt-2">
                         <div class="ml-1">
+                            <!--                    category-->
                             <mat-card>
                                 <mat-card-header>
                                     <mat-card-title>Category</mat-card-title>
+                                    <mat-card-subtitle><a href="">more</a></mat-card-subtitle>
                                 </mat-card-header>
 
                                 <mat-card-content>
                                     <ion-list>
                                         <ion-item matRipple *ngFor="let category of categories">
                                             <ion-label>{{category.name}}</ion-label>
-                                            <button mat-flat-button color="warn">{{category.number}}</button>
+                                            <button mat-flat-button color="accent">{{category.number}}</button>
 
                                         </ion-item>
 
                                     </ion-list>
+                                </mat-card-content>
+                            </mat-card>
+                            <!--                    Tags-->
+                            <mat-card class="mt-2">
+                                <mat-card-header>
+                                    <mat-card-title>Tags</mat-card-title>
+                                    <mat-card-subtitle><a href="">more</a></mat-card-subtitle>
+                                </mat-card-header>
+
+                                <mat-card-content>
+                                    <mat-chip-list aria-label="Fish selection">
+
+
+                                        <button mat-flat-button color="primary" class="m-1"
+                                                *ngFor="let tag of tags">{{tag.name}}</button>
+
+
+                                    </mat-chip-list>
+                                </mat-card-content>
+                            </mat-card>
+
+                            <!--                    Suggestions-->
+                            <mat-card class="mt-2">
+                                <mat-card-header>
+                                    <mat-card-title>Suggestions</mat-card-title>
+                                    <mat-card-subtitle><a href="">more</a></mat-card-subtitle>
+                                </mat-card-header>
+
+                                <mat-card-content>
+                                    <mat-chip-list aria-label="Fish selection">
+
+
+                                        <a href="*" class="m-1"
+                                           *ngFor="let tag of tags">{{tag.name}}</a>
+
+
+                                    </mat-chip-list>
                                 </mat-card-content>
                             </mat-card>
                         </div>

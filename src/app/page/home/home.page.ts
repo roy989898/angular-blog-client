@@ -20,6 +20,11 @@ interface Category {
     number: number;
 }
 
+interface Tag {
+    name: string;
+
+}
+
 
 @Component({
     selector: 'app-home',
@@ -127,6 +132,14 @@ export class HomePage implements AfterViewInit, OnDestroy {
             name: 'c4',
             number: 6
         }
+    ];
+
+    tags: Tag[] = [
+        {name: 'tag1'},
+        {name: 'tag1'},
+        {name: 'tag1'},
+        {name: 'tag1'},
+        {name: 'tag1'}
     ];
 
     topBarHeight = 0;
