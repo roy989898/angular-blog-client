@@ -18,13 +18,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {TopBarModule} from './component/top-bar/top-bar.module';
+import {BreedingRhombusSpinnerModule} from 'angular-epic-spinners';
 
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, environment.production ? [] : AkitaNgDevtools.forRoot(),
         MatToolbarModule
-        , AkitaNgRouterStoreModule.forRoot(), BrowserAnimationsModule, MatButtonModule, MatIconModule, MatSidenavModule, TopBarModule],
+        , AkitaNgRouterStoreModule.forRoot(), BrowserAnimationsModule, MatButtonModule, MatIconModule, MatSidenavModule, TopBarModule, BreedingRhombusSpinnerModule],
     providers: [
         StatusBar,
         SplashScreen,

@@ -9,6 +9,7 @@ import {TopBarQuery} from './akita/TopBarStateStore/TopBarQuery';
 import {TabNameIconService} from './tab-name-icon.service';
 import {MatDrawer} from '@angular/material/sidenav';
 import {SlideMenuQuery} from './akita/SlideMenuStore/SlideMenuQuery';
+import {MainLoadingQuery} from './akita/MainLoadingStore/MainLoadingQuery';
 
 @Component({
     selector: 'app-root',
@@ -45,12 +46,14 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     tab4Active$ = this.topBarQuery.timeLineBtOn$;
     tab5Active$ = this.topBarQuery.aboutMeBtOn$;
 
+    isLoading$ = this.mainLoadingQuery.isLoadingme$;
+
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
         private topBarQuery: TopBarQuery, public tabNameIconService: TabNameIconService,
-        private slideMenuQuery: SlideMenuQuery
+        private slideMenuQuery: SlideMenuQuery, private mainLoadingQuery: MainLoadingQuery
     ) {
         this.initializeApp();
     }
