@@ -14,4 +14,9 @@ export class MyRouterService {
 
         this.router.navigate(['/home']);
     }
+
+    toCategoryPage() {
+
+        this.router.navigate(['/category']);
+    }
 }

@@ -27,6 +27,7 @@ export class TabNameIconService {
     }
 
     tab2Click() {
+        this.myRouterService.toCategoryPage();
         console.log('tab 2 click');
     }
 
