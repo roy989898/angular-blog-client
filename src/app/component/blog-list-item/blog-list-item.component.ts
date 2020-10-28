@@ -1,4 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import {Blog} from '../../page/home/home.page';
 
 @Component({
     selector: 'app-blog-list-item',
@@ -9,6 +11,8 @@ export class BlogListItemComponent implements OnInit {
 
     constructor() {
     }
+
+    @Output() blogCLick = new EventEmitter<string>();
 
     @Input()
     title = '';
@@ -26,4 +30,8 @@ export class BlogListItemComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    wholeClick() {
+        this.blogCLick.emit(this.title);
+
+    }
 }

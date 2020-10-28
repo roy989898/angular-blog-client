@@ -167,4 +167,8 @@ export class HomePage extends HasTopBarPage implements OnInit {
         // console.warn('HomePage ionViewWillEnter');
     }
 
+    blogCLick($event: any) {
+        console.log($event);
+
+    }
 }
