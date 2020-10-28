@@ -3,6 +3,7 @@ import {TopBarComponent} from '../../component/top-bar/top-bar.component';
 import {NgResizeObserver, ngResizeObserverProviders} from 'ng-resize-observer';
 import {Subscription} from 'rxjs';
 import {TopBarStoreService} from '../../akita/TopBarStateStore/TopBarStoreService';
+import {HasTopBarPage} from '../HasTopbarPage';
 
 
 interface Blog {
@@ -34,7 +35,7 @@ interface Tag {
 
 })
 
-export class HomePage implements AfterViewInit, OnDestroy {
+export class HomePage extends HasTopBarPage {
     @ViewChild(TopBarComponent, {static: false}) topBar: TopBarComponent;
     blogs: Blog[] = [
         {
@@ -143,11 +144,10 @@ export class HomePage implements AfterViewInit, OnDestroy {
         {name: 'tag1'}
     ];
 
-    topBarHeight = 0;
-    private topBarD?: Subscription;
 
     constructor(private topBarStoreService: TopBarStoreService) {
 
+        super();
         topBarStoreService.updateTopState(true, false, false, false, false);
 
     }
@@ -158,15 +158,4 @@ export class HomePage implements AfterViewInit, OnDestroy {
 
     }
 
-    ngAfterViewInit(): void {
-
-// Create observer
-        this.topBarD = this.topBar.height$.subscribe((h) => {
-            this.topBarHeight = h;
-        });
-    }
-
-    ngOnDestroy(): void {
-        this.topBarD?.unsubscribe();
-    }
 }
