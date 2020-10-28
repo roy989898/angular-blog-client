@@ -3,6 +3,7 @@ import {TopBarStoreService} from '../../akita/TopBarStateStore/TopBarStoreServic
 import {TopBarComponent} from '../../component/top-bar/top-bar.component';
 import {Subscription} from 'rxjs';
 import {HasTopBarPage} from '../HasTopbarPage';
+import {Blog} from '../home/home.page';
 
 interface Category {
     name: string;
@@ -17,7 +18,86 @@ interface Category {
     styleUrls: ['./category.page.scss'],
 })
 export class CategoryPage extends HasTopBarPage implements OnInit {
+    blogs: Blog[] = [
+        {
+            title: 't1',
+            author: 'author',
+            brief: 'brief',
+            name: 'name',
+            date: new Date(),
+            view: 12,
+            type: 'type1',
 
+
+        },
+        {
+            title: 't2',
+            author: 'author2',
+            brief: 'brief2',
+            name: 'name2',
+            date: new Date(),
+            view: 9,
+            type: 'type2',
+
+
+        },
+        {
+            title: 't2',
+            author: 'author2',
+            brief: 'brief2',
+            name: 'name2',
+            date: new Date(),
+            view: 9,
+            type: 'type2',
+
+
+        },
+        {
+            title: 't2',
+            author: 'author2',
+            brief: 'brief2',
+            name: 'name2',
+            date: new Date(),
+            view: 9,
+            type: 'type2',
+
+
+        },
+        {
+            title: 't2',
+            author: 'author2',
+            brief: 'brief2',
+            name: 'name2',
+            date: new Date(),
+            view: 9,
+            type: 'type2',
+
+
+        },
+        {
+            title: 't2',
+            author: 'author2',
+            brief: 'brief2',
+            name: 'name2',
+            date: new Date(),
+            view: 9,
+            type: 'type2',
+
+
+        },
+        {
+            title: 't2',
+            author: 'author2',
+            brief: 'brief2',
+            name: 'name2',
+            date: new Date(),
+            view: 9,
+            type: 'type2',
+
+
+        },
+
+    ];
     categories: Category[] = [
         {
             name: 'c1',

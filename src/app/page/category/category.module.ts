@@ -10,6 +10,7 @@ import { CategoryPage } from './category.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import {BlogListItemModule} from '../../component/blog-list-item/blog-list-item.module';
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import {MatChipsModule} from '@angular/material/chips';
         CategoryPageRoutingModule,
         TopBarModule,
         MatCardModule,
-        MatChipsModule
+        MatChipsModule,
+        BlogListItemModule
     ],
   declarations: [CategoryPage]
 })

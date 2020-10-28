@@ -6,7 +6,7 @@ import {TopBarStoreService} from '../../akita/TopBarStateStore/TopBarStoreServic
 import {HasTopBarPage} from '../HasTopbarPage';
 
 
-interface Blog {
+export interface Blog {
     title: string;
     author: string;
     brief: string;

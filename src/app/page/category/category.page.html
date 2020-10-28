@@ -16,10 +16,20 @@
                         <mat-card>
                             <mat-chip-list aria-label="Fish selection">
 
-                                <mat-chip color="accent" [selected]="category.selected" *ngFor="let category of categories" (click)="categoryClick(category)">{{category.name}}
+                                <mat-chip color="accent" [selected]="category.selected"
+                                          *ngFor="let category of categories"
+                                          (click)="categoryClick(category)">{{category.name}}
                                 </mat-chip>
                             </mat-chip-list>
                         </mat-card>
+
+                        <app-blog-list-item *ngFor="let blog of blogs"
+                                            [title]="blog.title"
+                                            [brief]="blog.brief"
+                                            [author]="blog.author"
+                                            [date]="blog.date"
+                                            [view]="blog.view"
+                                            [tag]="blog.title"></app-blog-list-item>
 
                     </ion-col>
 
