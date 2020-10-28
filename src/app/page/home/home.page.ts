@@ -1,4 +1,7 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, ViewChild} from '@angular/core';
+import {TopBarComponent} from '../../component/top-bar/top-bar.component';
+import {NgResizeObserver, ngResizeObserverProviders} from 'ng-resize-observer';
+import {Subscription} from 'rxjs';
 
 
 interface Blog {
@@ -16,10 +19,11 @@ interface Blog {
     selector: 'app-home',
     templateUrl: 'home.page.html',
     styleUrls: ['home.page.scss'],
+
 })
 
-export class HomePage {
-
+export class HomePage implements AfterViewInit, OnDestroy {
+    @ViewChild(TopBarComponent, {static: false}) topBar: TopBarComponent;
     blogs: Blog[] = [
         {
             title: 't1',
@@ -101,7 +105,29 @@ export class HomePage {
 
     ];
 
+    topBarHeight = 0;
+    private topBarD?: Subscription;
+
     constructor() {
+
+
     }
 
+    onToBarResized($event: UIEvent) {
+        console.log('onToBarResized');
+        console.log($event);
+
+    }
+
+    ngAfterViewInit(): void {
+
+// Create observer
+        this.topBarD = this.topBar.height$.subscribe((h) => {
+            this.topBarHeight = h;
+        });
+    }
+
+    ngOnDestroy(): void {
+        this.topBarD?.unsubscribe();
+    }
 }
