@@ -1,3 +1,6 @@
-
+img {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=about-me.page.css.map */
