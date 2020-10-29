@@ -18,22 +18,24 @@ interface BlogWithDate {
 })
 export class TimelinePage extends HasTopBarPage implements OnInit {
     blogs: BlogWithDate[] = [
+        {title: 't3', date: new Date(2001, 11, 15)},
         {title: 't1', date: new Date(2020, 11, 17)},
         {title: 't2', date: new Date()},
-        {title: 't3', date: new Date(2001, 12, 15)},
         {title: 't4', date: new Date()},
         {title: 't5', date: new Date(2019, 11, 17)}
     ];
+    try$ = of([1, 2, 3, 4]);
     blogs$ = of(this.blogs).pipe(map((bds) => {
+            const result = bds.sort((a, b) => {
 
-            return bds.sort((a, b) => {
-
-                if (a < b) {
+                if (!(a.date < b.date)) {
                     return -1;
                 } else {
                     return 1;
                 }
             });
+            // console.log(result);
+            return result;
         }),
         map((bds) => {
 
@@ -48,8 +50,8 @@ export class TimelinePage extends HasTopBarPage implements OnInit {
                 bdArray.push(bd);
                 yearBdsMap.set(year, bdArray);
             });
-            const keys = yearBdsMap.keys();
-
+            const keys = Array.from(yearBdsMap.keys());
+            // console.log(keys);
             return {keys, yearBdsMap};
         })
     );

@@ -9,7 +9,9 @@
                 <ion-row>
                     <ion-col class="p-0">
 
-                        time line
+                        <div *ngFor="let key of ((blogs$|async).keys)">
+                            {{key}}
+                        </div>
 
                     </ion-col>
 
