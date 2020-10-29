@@ -10,6 +10,8 @@ import { SearchResultPage } from './search-result.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
 import {MatCardModule} from '@angular/material/card';
 import {BlogListItemModule} from '../../component/blog-list-item/blog-list-item.module';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
     imports: [
@@ -19,7 +21,9 @@ import {BlogListItemModule} from '../../component/blog-list-item/blog-list-item.
         SearchResultPageRoutingModule,
         TopBarModule,
         MatCardModule,
-        BlogListItemModule
+        BlogListItemModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
   declarations: [SearchResultPage]
 })

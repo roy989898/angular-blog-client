@@ -8,6 +8,15 @@
             <ion-grid>
                 <ion-row>
                     <ion-col>
+
+
+                        <form style="width: 100%" (ngSubmit)="searchSubmit()">
+                            <mat-form-field appearance="outline" style="width: 100%">
+                                <mat-label>Search...</mat-label>
+                                <input matInput [(ngModel)]="key" name="key">
+
+                            </mat-form-field>
+                        </form>
                         <mat-card class="d-flex flex-row justify-content-between mb-1">
                             <div class="title">Search Result</div>
                             <div><span>Total</span><span class="number">1</span><span>results</span></div>

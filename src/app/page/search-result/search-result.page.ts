@@ -101,4 +101,8 @@ export class SearchResultPage extends HasTopBarPage implements OnInit {
 
     }
 
+    searchSubmit() {
+        console.log(this.key);
+
+    }
 }
