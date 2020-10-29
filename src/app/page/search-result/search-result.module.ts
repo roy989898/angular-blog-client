@@ -8,6 +8,8 @@ import { SearchResultPageRoutingModule } from './search-result-routing.module';
 
 import { SearchResultPage } from './search-result.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
+import {MatCardModule} from '@angular/material/card';
+import {BlogListItemModule} from '../../component/blog-list-item/blog-list-item.module';
 
 @NgModule({
     imports: [
@@ -15,7 +17,9 @@ import {TopBarModule} from '../../component/top-bar/top-bar.module';
         FormsModule,
         IonicModule,
         SearchResultPageRoutingModule,
-        TopBarModule
+        TopBarModule,
+        MatCardModule,
+        BlogListItemModule
     ],
   declarations: [SearchResultPage]
 })

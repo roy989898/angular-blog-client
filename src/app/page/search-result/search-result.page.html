@@ -7,10 +7,21 @@
         <div class="ion-padding my-container">
             <ion-grid>
                 <ion-row>
-                    <ion-col class="p-0">
+                    <ion-col>
+                        <mat-card class="d-flex flex-row justify-content-between mb-1">
+                            <div class="title">Search Result</div>
+                            <div><span>Total</span><span class="number">1</span><span>results</span></div>
+                        </mat-card>
 
 
-                        {{key}}
+                        <app-blog-list-item *ngFor="let blog of blogs"
+                                            [title]="blog.title"
+                                            [brief]="blog.brief"
+                                            [author]="blog.author"
+                                            [date]="blog.date"
+                                            [view]="blog.view"
+                                            [tag]="blog.title"></app-blog-list-item>
+
                     </ion-col>
 
 
