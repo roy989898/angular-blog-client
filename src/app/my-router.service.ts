@@ -29,4 +29,10 @@ export class MyRouterService {
 
         this.router.navigate(['/tag']);
     }
+
+    toTimeLinePage() {
+        // this.topBarStoreService.updateTopState(false, true, false, false, false);
+
+        this.router.navigate(['/timeline']);
+    }
 }

@@ -23,20 +23,21 @@ export class TabNameIconService {
 
     tab1Click() {
         this.myRouterService.toHomePage();
-        console.log('tab 1 click');
+        // console.log('tab 1 click');
     }
 
     tab2Click() {
         this.myRouterService.toCategoryPage();
-        console.log('tab 2 click');
+        // console.log('tab 2 click');
     }
 
     tab3Click() {
         this.myRouterService.toTagPage();
-        console.log('tab 3 click');
+        // console.log('tab 3 click');
     }
 
     tab4Click() {
+        this.myRouterService.toTimeLinePage();
         console.log('tab 4 click');
     }
 

@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'tag',
     loadChildren: () => import('./page/tag/tag.module').then( m => m.TagPageModule)
   },
+  {
+    path: 'timeline',
+    loadChildren: () => import('./page/timeline/timeline.module').then( m => m.TimelinePageModule)
+  },
 ];
 
 @NgModule({
