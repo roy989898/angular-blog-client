@@ -67,4 +67,9 @@ export class TimelinePage extends HasTopBarPage implements OnInit {
         this.topBarStoreService.updateTopState(false, false, false, true, false);
         // console.warn('HomePage ionViewWillEnter');
     }
+
+    blogClick(blog: BlogWithDate) {
+        console.log(blog);
+
+    }
 }

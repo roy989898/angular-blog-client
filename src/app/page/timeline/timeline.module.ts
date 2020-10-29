@@ -8,6 +8,7 @@ import { TimelinePageRoutingModule } from './timeline-routing.module';
 
 import { TimelinePage } from './timeline.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {TopBarModule} from '../../component/top-bar/top-bar.module';
     FormsModule,
     IonicModule,
     TimelinePageRoutingModule,
-    TopBarModule
+    TopBarModule,
+    MatCardModule
   ],
   declarations: [TimelinePage]
 })

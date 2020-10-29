@@ -1,0 +1,17 @@
+@import "src/app/myVairable";
+@import '~@angular/material/theming';
+
+$p: mat-color($primary);
+$a: mat-color($accent);
+
+
+
+
+
+
+.year {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: $p;
+}
