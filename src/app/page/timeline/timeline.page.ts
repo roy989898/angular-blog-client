@@ -24,7 +24,17 @@ export class TimelinePage extends HasTopBarPage implements OnInit {
         {title: 't4', date: new Date()},
         {title: 't5', date: new Date(2019, 11, 17)}
     ];
-    blogs$ = of(this.blogs).pipe(
+    blogs$ = of(this.blogs).pipe(map((bds) => {
+
+            return bds.sort((a, b) => {
+
+                if (a < b) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            });
+        }),
         map((bds) => {
 
             const yearBdsMap = new Map<number, BlogWithDate[]>();
