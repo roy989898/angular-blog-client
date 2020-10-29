@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'timeline',
     loadChildren: () => import('./page/timeline/timeline.module').then( m => m.TimelinePageModule)
   },
+  {
+    path: 'about-me',
+    loadChildren: () => import('./page/about-me/about-me.module').then( m => m.AboutMePageModule)
+  },
 ];
 
 @NgModule({

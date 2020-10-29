@@ -35,4 +35,10 @@ export class MyRouterService {
 
         this.router.navigate(['/timeline']);
     }
+
+    toAboutMePage() {
+        // this.topBarStoreService.updateTopState(false, true, false, false, false);
+
+        this.router.navigate(['/about-me']);
+    }
 }

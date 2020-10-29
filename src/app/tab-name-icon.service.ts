@@ -38,10 +38,11 @@ export class TabNameIconService {
 
     tab4Click() {
         this.myRouterService.toTimeLinePage();
-        console.log('tab 4 click');
+        // console.log('tab 4 click');
     }
 
     tab5Click() {
-        console.log('tab 5 click');
+        this.myRouterService.toAboutMePage();
+        // console.log('tab 5 click');
     }
 }
