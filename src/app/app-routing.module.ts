@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'about-me',
     loadChildren: () => import('./page/about-me/about-me.module').then( m => m.AboutMePageModule)
   },
+  {
+    path: 'search-result/:key',
+    loadChildren: () => import('./page/search-result/search-result.module').then( m => m.SearchResultPageModule)
+  },
 ];
 
 @NgModule({

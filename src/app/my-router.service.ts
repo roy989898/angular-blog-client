@@ -30,15 +30,21 @@ export class MyRouterService {
         this.router.navigate(['/tag']);
     }
 
-    toTimeLinePage() {
+    toTimeLinePage(key: string) {
         // this.topBarStoreService.updateTopState(false, true, false, false, false);
 
-        this.router.navigate(['/timeline']);
+        this.router.navigate(['/timeline', key]);
     }
 
     toAboutMePage() {
         // this.topBarStoreService.updateTopState(false, true, false, false, false);
 
         this.router.navigate(['/about-me']);
+    }
+
+    toSearchResultPage() {
+        // this.topBarStoreService.updateTopState(false, true, false, false, false);
+
+        this.router.navigate(['/search-result']);
     }
 }
