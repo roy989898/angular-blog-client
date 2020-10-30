@@ -5,19 +5,18 @@ $p: mat-color($primary);
 $a: mat-color($accent);
 
 
-
-
-
-
-
-
-.blog_comment_author{
+.blog_comment_author {
   color: $a;
   font-size: 0.9rem;
 }
+
 img.small_img_icon_rounded {
   width: 35px;
   height: 35px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+a {
+  cursor: pointer;
 }
