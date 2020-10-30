@@ -19,9 +19,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {TopBarModule} from './component/top-bar/top-bar.module';
 import {BreedingRhombusSpinnerModule} from 'angular-epic-spinners';
+import { MarkedPipe } from './pipe/marked.pipe';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, MarkedPipe],
     entryComponents: [],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, environment.production ? [] : AkitaNgDevtools.forRoot(),
         MatToolbarModule

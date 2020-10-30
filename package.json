@@ -34,6 +34,7 @@
     "@juggle/resize-observer": "^3.2.0",
     "angular-epic-spinners": "^2.0.0",
     "await-delay": "^1.0.0",
+    "marked": "^1.2.2",
     "ng-resize-observer": "^1.0.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
