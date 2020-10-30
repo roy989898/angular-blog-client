@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {MyComment} from '../../page/blog-detail/blog-detail.page';
 
 @Component({
     selector: 'app-reply-item',
@@ -15,6 +16,8 @@ export class ReplyItemComponent implements OnInit {
     @Input()
     content: string;
     @Output() replyClickEvent = new EventEmitter<string>();
+    @Input()
+    childComments: MyComment[];
 
 
     constructor() {

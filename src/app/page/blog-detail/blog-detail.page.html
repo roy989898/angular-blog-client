@@ -52,8 +52,9 @@
 
                         <mat-card class="mt-2">
 
-                            <app-reply-item  *ngFor="let comment of comments" [author]="comment.name"
+                            <app-reply-item *ngFor="let comment of comments" [author]="comment.name"
                                             [content]="comment.content" [date]="comment.date"
+                                            [childComments]="comment.childrenComments"
                                             [icon]="icon"></app-reply-item>
 
                             <!--   <mat-card>
