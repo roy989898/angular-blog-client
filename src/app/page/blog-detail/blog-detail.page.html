@@ -48,6 +48,31 @@
 
 
                         <!--                        <div>{{blogDetail}}</div>-->
+
+
+                        <mat-card class="mt-2">
+
+                            <app-reply-item  *ngFor="let comment of comments" [author]="comment.name"
+                                            [content]="comment.content" [date]="comment.date"
+                                            [icon]="icon"></app-reply-item>
+
+                            <!--   <mat-card>
+
+                                   <div class="d-flex flex-row align-items-center blog_comment_author">
+                                       <img [src]="icon" alt="" class="small_img_icon_rounded mr-2">
+                                       <div class="">{{author}}</div>
+                                       <div class="blog_date mx-1">{{date| date:'short' }}</div>
+                                       <a href="*">Reply</a>
+
+
+                                   </div>
+
+                                   <mat-card-content class="mt-1">
+                                       A reply!!!!!
+                                   </mat-card-content>
+
+                               </mat-card>-->
+                        </mat-card>
                     </ion-col>
 
                     <!--                    TODO comment-->

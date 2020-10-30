@@ -4,11 +4,6 @@ import {HasTopBarPage} from '../HasTopbarPage';
 import {mdLong} from '../../MdData';
 import {Tag} from '@angular/compiler/src/i18n/serializers/xml_helper';
 
-@Component({
-    selector: 'app-blog-detail',
-    templateUrl: './blog-detail.page.html',
-    styleUrls: ['./blog-detail.page.scss'],
-})
 interface Comment {
     date: Date;
     name: string;
@@ -17,6 +12,12 @@ interface Comment {
 
 }
 
+
+@Component({
+    selector: 'app-blog-detail',
+    templateUrl: './blog-detail.page.html',
+    styleUrls: ['./blog-detail.page.scss'],
+})
 export class BlogDetailPage extends HasTopBarPage implements OnInit {
     tags = [
         {

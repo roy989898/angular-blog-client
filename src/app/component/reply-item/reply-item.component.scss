@@ -5,22 +5,16 @@ $p: mat-color($primary);
 $a: mat-color($accent);
 
 
-.blog_title {
-  color: $p;
-  font-size: 1.3rem;
-}
 
 
-.blog_author {
-  color: $a;
-  font-size: 1.3rem;
-}
 
-.blog_comment_author {
+
+
+
+.blog_comment_author{
   color: $a;
   font-size: 0.9rem;
 }
-
 img.small_img_icon_rounded {
   width: 35px;
   height: 35px;

@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {TypeModule} from '../../component/type/type.module';
 import {MatChipsModule} from '@angular/material/chips';
+import {ReplyItemModule} from '../../component/reply-item/reply-item.module';
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import {MatChipsModule} from '@angular/material/chips';
         MatIconModule,
         MatBadgeModule,
         TypeModule,
-        MatChipsModule
+        MatChipsModule,
+        ReplyItemModule
     ],
     declarations: [BlogDetailPage]
 })
