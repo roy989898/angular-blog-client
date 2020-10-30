@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HasTopBarPage} from '../HasTopbarPage';
+import {mdLong} from '../../MdData';
+import {Tag} from '@angular/compiler/src/i18n/serializers/xml_helper';
 
 @Component({
     selector: 'app-blog-detail',
@@ -8,7 +10,20 @@ import {HasTopBarPage} from '../HasTopbarPage';
     styleUrls: ['./blog-detail.page.scss'],
 })
 export class BlogDetailPage extends HasTopBarPage implements OnInit {
+    tags = [
+        {
+            name: 't1',
 
+        },
+        {
+            name: 't2',
+
+        },
+        {
+            name: 't3',
+
+        },
+    ];
     blogDetail = '### Features\n' +
         '\n' +
         '- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);\n' +
@@ -18,7 +33,7 @@ export class BlogDetailPage extends HasTopBarPage implements OnInit {
         '- Support identification, interpretation, fliter of the HTML tags;\n' +
         '- Support TeX (LaTeX expressions, Based on KaTeX), Flowchart and Sequence Diagram of Markdown extended syntax;\n' +
         '- Support AMD/CMD (Require.js & Sea.js) Module Loader, and Custom/define editor plugins;';
-
+    blogDetail2 = mdLong;
     header = '';
 
     title = 't1';

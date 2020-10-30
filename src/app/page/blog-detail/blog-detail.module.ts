@@ -12,6 +12,8 @@ import {MarkedModule} from '../../pipe/marked/marked.module';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {TypeModule} from '../../component/type/type.module';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
     imports: [
@@ -23,7 +25,9 @@ import {MatBadgeModule} from '@angular/material/badge';
         MarkedModule,
         MatCardModule,
         MatIconModule,
-        MatBadgeModule
+        MatBadgeModule,
+        TypeModule,
+        MatChipsModule
     ],
     declarations: [BlogDetailPage]
 })
