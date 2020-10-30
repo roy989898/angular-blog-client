@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {HasTopBarPage} from '../HasTopbarPage';
 import {mdLong} from '../../MdData';
 import {Tag} from '@angular/compiler/src/i18n/serializers/xml_helper';
+import {FormBuilder, Validators} from '@angular/forms';
 
 export interface MyComment {
     date: Date;
@@ -68,8 +69,13 @@ export class BlogDetailPage extends HasTopBarPage implements OnInit {
         {date: new Date(), name: 'Peter', content: 'cccccc', childrenComments: [], icon: this.icon},
         {date: new Date(), name: 'Peter', content: 'cccccc', childrenComments: [], icon: this.icon},
     ];
+    commentFormGroup = this.fb.group({
+        message: ['', Validators.required],
+        name: ['', Validators.required],
+        email: ['', Validators.required]
+    });
 
-    constructor(protected activatedRoute: ActivatedRoute) {
+    constructor(protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {
         super();
     }
 
@@ -80,6 +86,11 @@ export class BlogDetailPage extends HasTopBarPage implements OnInit {
 
     replyClick($event: string) {
         console.log($event);
+
+    }
+
+    commentCLick() {
+        console.log(this.commentFormGroup.value);
 
     }
 }

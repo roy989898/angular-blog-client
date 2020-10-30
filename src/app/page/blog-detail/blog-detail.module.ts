@@ -15,7 +15,10 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {TypeModule} from '../../component/type/type.module';
 import {MatChipsModule} from '@angular/material/chips';
 import {ReplyItemModule} from '../../component/reply-item/reply-item.module';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
     imports: [
         CommonModule,
@@ -29,7 +32,11 @@ import {ReplyItemModule} from '../../component/reply-item/reply-item.module';
         MatBadgeModule,
         TypeModule,
         MatChipsModule,
-        ReplyItemModule
+        ReplyItemModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatButtonModule
     ],
     declarations: [BlogDetailPage]
 })

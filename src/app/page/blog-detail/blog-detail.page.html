@@ -54,7 +54,8 @@
 
                             <app-reply-item *ngFor="let comment of comments" [author]="comment.name"
                                             [content]="comment.content" [date]="comment.date"
-                                            [childComments]="comment.childrenComments" (replyClickEvent)="replyClick($event)"
+                                            [childComments]="comment.childrenComments"
+                                            (replyClickEvent)="replyClick($event)"
                                             [icon]="comment.icon"></app-reply-item>
 
                             <!--   <mat-card>
@@ -74,9 +75,47 @@
 
                                </mat-card>-->
                         </mat-card>
-                    </ion-col>
 
-                    <!--                    TODO comment-->
+                        <mat-card class="mt-2">
+
+
+                            <form action="" [formGroup]="commentFormGroup">
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col>
+                                            <mat-form-field class="form-field">
+                                                <mat-label>Message</mat-label>
+                                                <textarea matInput formControlName="message"></textarea>
+
+                                            </mat-form-field>
+                                        </ion-col>
+                                    </ion-row>
+
+                                    <ion-row>
+                                        <ion-col>
+                                            <mat-form-field class="form-field">
+                                                <mat-label>Name</mat-label>
+                                                <input matInput type="text" formControlName="name"/>
+
+                                            </mat-form-field>
+                                        </ion-col>
+                                        <ion-col>
+
+                                            <mat-form-field class="form-field">
+                                                <mat-label>Email</mat-label>
+                                                <input matInput type="email" formControlName="email"/>
+
+                                            </mat-form-field>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+
+
+                                <button mat-button color="primary" [disabled]="!commentFormGroup.valid" (click)="commentCLick()">Comment</button>
+                            </form>
+
+                        </mat-card>
+                    </ion-col>
 
 
                 </ion-row>

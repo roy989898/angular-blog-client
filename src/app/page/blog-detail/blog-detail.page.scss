@@ -3,7 +3,9 @@
 
 $p: mat-color($primary);
 $a: mat-color($accent);
-
+.form-field {
+  width: 100%;
+}
 
 .blog_title {
   color: $p;
