@@ -54,8 +54,8 @@
 
                             <app-reply-item *ngFor="let comment of comments" [author]="comment.name"
                                             [content]="comment.content" [date]="comment.date"
-                                            [childComments]="comment.childrenComments"
-                                            [icon]="icon"></app-reply-item>
+                                            [childComments]="comment.childrenComments" (replyClickEvent)="replyClick($event)"
+                                            [icon]="comment.icon"></app-reply-item>
 
                             <!--   <mat-card>
 

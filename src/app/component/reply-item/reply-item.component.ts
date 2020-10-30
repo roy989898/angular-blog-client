@@ -29,4 +29,9 @@ export class ReplyItemComponent implements OnInit {
     replyClick() {
         this.replyClickEvent.emit(this.author);
     }
+
+    childreplyClick($event: string) {
+        this.replyClickEvent.emit($event);
+
+    }
 }

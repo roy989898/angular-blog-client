@@ -17,6 +17,6 @@
 
 <div class="ml-5">
 
-    <app-reply-item *ngFor="let comment of childComments" [author]="comment.name" [icon]="icon" [date]="comment.date"
-                    [content]="comment.content" [childComments]="comment.childrenComments"></app-reply-item>
+    <app-reply-item *ngFor="let comment of childComments" [author]="comment.name" [icon]="comment.icon" [date]="comment.date"
+                    [content]="comment.content" [childComments]="comment.childrenComments" (replyClickEvent)="childreplyClick($event)"></app-reply-item>
 </div>
