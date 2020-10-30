@@ -8,6 +8,7 @@ import { BlogDetailPageRoutingModule } from './blog-detail-routing.module';
 
 import { BlogDetailPage } from './blog-detail.page';
 import {TopBarModule} from '../../component/top-bar/top-bar.module';
+import {MarkedModule} from '../../pipe/marked/marked.module';
 
 @NgModule({
     imports: [
@@ -15,8 +16,9 @@ import {TopBarModule} from '../../component/top-bar/top-bar.module';
         FormsModule,
         IonicModule,
         BlogDetailPageRoutingModule,
-        TopBarModule
+        TopBarModule,
+        MarkedModule
     ],
-  declarations: [BlogDetailPage]
+    declarations: [BlogDetailPage]
 })
 export class BlogDetailPageModule {}
