@@ -47,4 +47,10 @@ export class MyRouterService {
 
         this.router.navigate(['/search-result', key]);
     }
+
+    toBLogDetailPage(key: string) {
+        // this.topBarStoreService.updateTopState(false, true, false, false, false);
+
+        this.router.navigate(['/blog-detail', key]);
+    }
 }
