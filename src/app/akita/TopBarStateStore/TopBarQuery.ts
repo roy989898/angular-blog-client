@@ -12,6 +12,7 @@ export class TopBarQuery extends Query<TopBarState> {
     tagBtOn$ = this.select('tagBtOn');
     timeLineBtOn$ = this.select('timeLineBtOn');
     aboutMeBtOn$ = this.select('aboutMeBtOn');
+    searchBtOn$ = this.select('searchBtOn');
 
     constructor(protected store: TopBarStore) {
         super(store);

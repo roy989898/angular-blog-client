@@ -7,6 +7,7 @@ export interface TopBarState {
     tagBtOn: boolean;
     timeLineBtOn: boolean;
     aboutMeBtOn: boolean;
+    searchBtOn: boolean;
 }
 
 export function createInitialState(): TopBarState {
@@ -16,6 +17,7 @@ export function createInitialState(): TopBarState {
         tagBtOn: false,
         timeLineBtOn: false,
         aboutMeBtOn: false,
+        searchBtOn: false,
     };
 }
 

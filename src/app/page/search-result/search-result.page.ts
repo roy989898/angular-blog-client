@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HasTopBarPage} from '../HasTopbarPage';
 import {Blog} from '../home/home.page';
+import {TopBarStoreService} from '../../akita/TopBarStateStore/TopBarStoreService';
 
 @Component({
     selector: 'app-search-result',
@@ -91,7 +92,7 @@ export class SearchResultPage extends HasTopBarPage implements OnInit {
 
     ];
 
-    constructor(protected activatedRoute: ActivatedRoute) {
+    constructor(protected activatedRoute: ActivatedRoute, private topBarStoreService: TopBarStoreService) {
         super();
     }
 
@@ -104,5 +105,10 @@ export class SearchResultPage extends HasTopBarPage implements OnInit {
     searchSubmit() {
         console.log(this.key);
 
+    }
+
+    ionViewWillEnter() {
+        this.topBarStoreService.updateTopState(false, false, false, false, false, true);
+        // console.warn('HomePage ionViewWillEnter');
     }
 }

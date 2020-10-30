@@ -39,13 +39,16 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     tab5Icon = this.tabNameIconService.tab5Icon;
     tab5Text = this.tabNameIconService.tab5Text;
 
+    tab6Icon = this.tabNameIconService.tab6Icon;
+    tab6Text = this.tabNameIconService.tab6Text;
+
 
     tab1Active$ = this.topBarQuery.indexBtOn$;
     tab2Active$ = this.topBarQuery.categoryBtOn$;
     tab3Active$ = this.topBarQuery.tagBtOn$;
     tab4Active$ = this.topBarQuery.timeLineBtOn$;
     tab5Active$ = this.topBarQuery.aboutMeBtOn$;
-
+    tab6Active$ = this.topBarQuery.searchBtOn$;
     isLoading$ = this.mainLoadingQuery.isLoadingme$;
 
     constructor(
@@ -95,6 +98,11 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
     tab5Click() {
         this.tabNameIconService.tab5Click();
+        this.drawer.close();
+    }
+
+    tab6Click() {
+        this.tabNameIconService.tab6Click();
         this.drawer.close();
     }
 

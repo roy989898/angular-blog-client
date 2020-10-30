@@ -16,6 +16,8 @@ export class TabNameIconService {
     tab4Text = 'timeLine';
     tab5Icon = 'face';
     tab5Text = 'About Me';
+    tab6Icon = 'search';
+    tab6Text = 'Search';
 
 
     constructor(private myRouterService: MyRouterService) {
@@ -43,6 +45,11 @@ export class TabNameIconService {
 
     tab5Click() {
         this.myRouterService.toAboutMePage();
+        // console.log('tab 5 click');
+    }
+
+    tab6Click() {
+        this.myRouterService.toSearchResultPage('');
         // console.log('tab 5 click');
     }
 }

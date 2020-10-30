@@ -10,14 +10,16 @@ export class TopBarStoreService {
     constructor(private topBarStore: TopBarStore) {
     }
 
-
-    updateTopState(indexBtOn: boolean, categoryBtOn: boolean, tagBtOn: boolean, timeLineBtOn: boolean, aboutMeBtOn: boolean): void {
+    updateTopState(indexBtOn: boolean = false, categoryBtOn: boolean = false,
+                   tagBtOn: boolean = false, timeLineBtOn: boolean = false, aboutMeBtOn: boolean = false,
+                   searchBtOn: boolean = false): void {
         this.topBarStore.update({
             indexBtOn,
             categoryBtOn,
             tagBtOn,
             timeLineBtOn,
-            aboutMeBtOn
+            aboutMeBtOn,
+            searchBtOn
         });
 
     }

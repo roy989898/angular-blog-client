@@ -28,12 +28,16 @@ export class AdminTopBarComponent implements OnInit {
     tab5Icon = this.tabNameIconService.tab5Icon;
     tab5Text = this.tabNameIconService.tab5Text;
 
+    tab6Icon = this.tabNameIconService.tab6Icon;
+    tab6Text = this.tabNameIconService.tab6Text;
+
 
     tab1Active$ = this.topBarQuery.indexBtOn$;
     tab2Active$ = this.topBarQuery.categoryBtOn$;
     tab3Active$ = this.topBarQuery.tagBtOn$;
     tab4Active$ = this.topBarQuery.timeLineBtOn$;
     tab5Active$ = this.topBarQuery.aboutMeBtOn$;
+    tab6Active$ = this.topBarQuery.searchBtOn$;
 
 
     name = 'nameK';
