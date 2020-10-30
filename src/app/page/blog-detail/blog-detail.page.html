@@ -7,8 +7,23 @@
         <div class="ion-padding my-container">
             <ion-grid>
                 <ion-row>
-                    <ion-col size-sm="7" size="12" class="p-0">
+                    <ion-col  class="p-0">
 
+                        <mat-card>
+                            <mat-card-header>
+                                <div class="d-flex flex-row align-items-center">
+                                    <img [src]="icon" alt="" class="small_img_icon_rounded mr-2">
+                                    <div class="blog_author">{{author}}</div>
+                                    <div class="mx-1">update:</div>
+                                    <div class="blog_date mx-1">{{date| date:'short' }}</div>
+                                    <mat-icon class="mr-5" [matBadge]="view"
+                                              matBadgeColor="warn">
+                                        visibility
+                                    </mat-icon>
+                                </div>
+<!--                                <mat-card-title>{{header}}</mat-card-title>-->
+                            </mat-card-header>
+                        </mat-card>
                         blog detail
 
                         <div [innerHTML]="blogDetail | marked"></div>
