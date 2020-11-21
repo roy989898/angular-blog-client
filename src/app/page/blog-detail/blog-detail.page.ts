@@ -72,7 +72,7 @@ export class BlogDetailPage extends HasTopBarPage implements OnInit {
     commentFormGroup = this.fb.group({
         message: ['', Validators.required],
         name: ['', Validators.required],
-        email: ['', Validators.email]
+        email: ['', [Validators.email, Validators.required]]
     });
 
     constructor(protected activatedRoute: ActivatedRoute, private fb: FormBuilder) {
